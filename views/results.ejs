@@ -1,0 +1,17 @@
+<% include partials/header %>
+
+<h1> Here are your results!</h1>
+
+
+<ul>
+<% data["results"].forEach(function(starships){ %>
+<li><%= starships["name"] %> </li>
+<li></li><%=starships["manufacturer"]%> </li>
+<li><%=starships["model"]%> </li>
+<% }); %>
+</ul>
+
+<a href="/">Search again?</a>
+
+
+<% include partials/footer %>
