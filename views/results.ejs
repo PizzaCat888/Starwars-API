@@ -1,17 +1,36 @@
 <% include partials/header %>
 
-<h1> Here are your results!</h1>
-
-
+<div class="container searchmargin">
+    <div class="row">
+        <h1 style="text-align: center">Here are your results!</h1>
+    <div style="width: 30%; margin: 25px auto;">
 <ul>
 <% data["results"].forEach(function(starships){ %>
-<li><%= starships["name"] %> </li>
-<li></li><%=starships["manufacturer"]%> </li>
-<li><%=starships["model"]%> </li>
+<li><p>The Name: 
+<br>
+<%= starships["name"] %> </p></li>
+<li><p>The Manufacturer:
+<br><%=starships["manufacturer"]%> </p></li>
+<li><p>The Model:
+<br><%=starships["model"]%></p> </li>
+<li><p>The Cost:
+<br><%=starships["cost_in_credits"]%></p> </li>
+<li><p>The Number of Crew:
+<br><%=starships["crew"]%></p> </li>
+<li><p>The Number of passengers:
+<br><%=starships["passengers"]%></p> </li>
+<li><p>The Starship Class:
+<br><%=starships["starship_class"]%></p> 
+<hr>
+</li>
 <% }); %>
 </ul>
-
 <a href="/">Search again?</a>
+    </div>
+    </div>
+</div>
+
+
 
 
 <% include partials/footer %>
